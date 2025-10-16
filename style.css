@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-color: #F4F0EA;
+    color: #1A536F	;
+}
+header {
+    text-align: center;
+    padding: 2rem;
+    background-color: #373C48;
+    color: #F4F0EA;
+    width: 100%;
+    height: 100%;
+}
+
+main {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+div h3 {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    font-weight: 600;
+}
+
+h2 {
+    font-weight: 600;
+    text-align: center;
+    padding: 1rem 0rem 0.5rem 0rem;
+}
+table  {
+    border-collapse: collapse;
+    border: 1.5px solid #1A536F;
+    margin: 1rem;
+    width: 100%;
+    background-color: #F0F0F0;
+}
+
+.plastico {
+    color: rgb(214, 0, 0);
+}
+
+.vidro {
+    color: green;
+}
+
+.metal {
+    color: rgba(192, 192, 0, 0.911);
+}
+
+.papel {
+    color: rgb(0, 0, 153);
+}
+
+.especiais {
+    color: rgb(14, 14, 14);
+}
+
+th {
+    border: 1px solid #1A536F;
+    padding: 1rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+td {
+    border: 1px solid #1A536F;
+    text-align: center;
+    padding: 1rem;
+}
+
+tfoot td {
+    text-align: center;
+    font-weight: 600;
+    color: #2E8B57;
+}
+
+img {
+    width: 50rem; /* largura */
+    height: 50rem; /* altura */
+    border-radius: 1rem;
+
+    align-content: center;
+}
+
+footer {
+    text-align: center;
+    font-weight: 600;
+    padding: 0.5rem;
+}
+
+.border {
+    border-bottom: solid 2px  #1A536F;
+    margin-bottom: 0.5rem;
+}
