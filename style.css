@@ -117,9 +117,13 @@ footer {
 
 /* media */
 
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
     .nunca-jogar {
         display: none;
+    }
+    .nunca-jogar-mobile {
+        display: flex;
+        flex-direction: column;
     }
     #map {
         height: 300px;
