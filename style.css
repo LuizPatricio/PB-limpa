@@ -93,12 +93,11 @@ tfoot td {
     color: #2E8B57;
 }
 
-img {
-    width: 50rem; /* largura */
-    height: 50rem; /* altura */
-    border-radius: 1rem;
-
-    align-content: center;
+#map {
+    height: 500px;
+    width: 95%;
+    align-self: center;
+    border-radius: 10px;
 }
 
 footer {
