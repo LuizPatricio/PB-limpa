@@ -6,123 +6,125 @@
     <title>PB limpa</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" type="imagex/png" href="./assets/favicon.ico">
-</head>
-<body>
-        <header>
-            <h1>PB limpa - Projeto Comunitário de Descarte Consciente</h1>
-        </header>
-        <main>
-            <div class="contentores-exp">
-                <div class="sobre">
-                    <h3>O que é o projeto?</h3>
-                    <p>Este site foi criado para simplificar o seu descarte! Localize de forma rápida o contentor de coleta mais próximo de você. Além da localização, trazemos o controle de cada unidade, permitindo que você reporte problemas e ajude a manter a funcionalidade do sistema. Juntos, garantimos uma Pescaria Brava mais organizada e limpa.</p>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    </head>
+    <body>
+            <header>
+                <h1>♻️ PB limpa - Projeto Comunitário de Descarte Consciente</h1>
+            </header>
+            <main>
+                <div class="contentores-exp">
+                    <div class="sobre">
+                        <h3>O que é o projeto?</h3>
+                        <p>Este site foi criado para simplificar o seu descarte! Localize de forma rápida o contentor de coleta mais próximo de você. Além da localização, trazemos o controle de cada unidade, permitindo que você reporte problemas e ajude a manter a funcionalidade do sistema. Juntos, garantimos uma Pescaria Brava mais organizada e limpa.</p>
+                    </div>
+                    <div class="contentores-trata">
+                        <h3>O que se trata os contetores?</h3>
+                        <p>É um contêiner de lixo é uma estrutura de grande capacidade, utilizada para o armazenamento temporário de resíduos sólidos em áreas públicas ou privadas.</p>
+                    </div>
+                    <div class="contentores-funcao">
+                        <h3>Qual sua função?</h3>
+                        <p>Além de trazerem maior comodidade aos moradores da região também nos trás maior segurança, limpeza e controle para nossa cidade.</p>
+                        <p>Durante os anuncio dos novos contetores pela cidade o prefeito Henrique Castro ressaltou, “Esses novos contentores vão facilitar o trabalho da coleta e manter a cidade mais limpa e organizada. Já estamos distribuindo as primeiras unidades nos bairros e, ao longo das próximas semanas, a cobertura será ampliada para todas as regiões de Pescaria Brava.”</p>
+                    </div>
+                    <div class="contentores-feito-cpc">
+                        <h3>Qual sua capacidade e do que é feito?</h3>
+                        <p>Os contentores possuem capacidade de 1.000 litros, são fabricados em polietileno de alta densidade, com rodas resistentes e sistema de travamento, garantindo durabilidade e segurança na coleta dos resíduos domiciliares e comerciais.</p>
+                    </div>
+                    <div class="nunca-jogar">
+                        <table>
+                            <tr>
+                                <th>Material</th>
+                                <th>Jogar</th>
+                                <th>Não Jogar</th>
+                                <th>Nunca</th>
+                            </tr>
+                            <tr>
+                                <td class="plastico">Plástico</td>
+                                <td>Garrafas PET, embalagens de shampoo/limpeza, potes de margarina, sacolas limpas.</td>
+                                <td>Embalagens de salgadinho metalizadas, plástico excessivamente sujo de óleo.</td>
+                                <td>Estes vão para o lixo comum se sujos</td>
+                            </tr>
+                            <tr>
+                                <td class="papel">Papel</td>
+                                <td>Jornais, revistas, caixas de papelão limpas, embalagens de ovo.</td>
+                                <td>Papel higiênico, papel toalha usado, papel de bala, papel carbono, papel sujo de gordura (pizza).</td>
+                                <td>Estes vão para o lixo comum</td>
+                            </tr>
+                            <tr>
+                                <td class="metal">Metal</td>
+                                <td>Latas de refrigerante, latas de alimentos (limpas), tampas de pote.</td>
+                                <td>Clipe de papel (pequeno demais para ser recuperado), esponja de aço.</td>
+                                <td>Estes vão para o lixo comum</td>
+                            </tr>
+                            <tr>
+                                <td class="vidro">Vidro</td>
+                                <td>Garrafas e potes de vidro (inteiros e limpos).</td>
+                                <td>Vidro quebrado (embrulhar em papelão!). Louça/cerâmica quebrada.</td>
+                                <td>Estes vão para o lixo comum/rejeito</td>
+                            </tr>
+                            <td class="especiais">Itens Especiais</td>
+                            <td>Se não for reciclável padrão</td>
+                            <td>Fraldas, absorventes, pontas de cigarro, pó de café usado.</td>
+                            <td>Pilhas, Baterias, Lâmpadas, Óleo de Cozinha, Remédios Vencidos.</td>
+                            <tr>
+                                <tfoot>
+                                    <td colspan="4">Se for jogar algo no reciclável, pergunte-se: "Está limpo e seco?" Se a resposta for não, ele deve ir para o contentor de lixo comum.</td>
+                                </tfoot>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
-                <div class="contentores-trata">
-                    <h3>O que se trata os contetores?</h3>
-                    <p>É um contêiner de lixo é uma estrutura de grande capacidade, utilizada para o armazenamento temporário de resíduos sólidos em áreas públicas ou privadas.</p>
+                <div id="map">    
                 </div>
-                <div class="contentores-funcao">
-                    <h3>Qual sua função?</h3>
-                    <p>Além de trazerem maior comodidade aos moradores da região também nos trás maior segurança, limpeza e controle para nossa cidade.</p>
-                    <p>Durante os anuncio dos novos contetores pela cidade o prefeito Henrique Castro ressaltou, “Esses novos contentores vão facilitar o trabalho da coleta e manter a cidade mais limpa e organizada. Já estamos distribuindo as primeiras unidades nos bairros e, ao longo das próximas semanas, a cobertura será ampliada para todas as regiões de Pescaria Brava.”</p>
                 </div>
-                <div class="contentores-feito-cpc">
-                    <h3>Qual sua capacidade e do que é feito?</h3>
-                    <p>Os contentores possuem capacidade de 1.000 litros, são fabricados em polietileno de alta densidade, com rodas resistentes e sistema de travamento, garantindo durabilidade e segurança na coleta dos resíduos domiciliares e comerciais.</p>
-                </div>
-                <div class="nunca-jogar">
+                <div class="horario-data">
                     <table>
                         <tr>
-                            <th>Material</th>
-                            <th>Jogar</th>
-                            <th>Não Jogar</th>
-                            <th>Nunca</th>
+                            <th>Dia</th>
+                            <th>Bairro</th>
+                            <th>Horário</th>
                         </tr>
                         <tr>
-                            <td class="plastico">Plástico</td>
-                            <td>Garrafas PET, embalagens de shampoo/limpeza, potes de margarina, sacolas limpas.</td>
-                            <td>Embalagens de salgadinho metalizadas, plástico excessivamente sujo de óleo.</td>
-                            <td>Estes vão para o lixo comum se sujos</td>
+                            <td>Segunda-feira</td>
+                            <td>Ruas principais e avenidas</td>
+                            <td>A partir das 07:00</td>
                         </tr>
                         <tr>
-                            <td class="papel">Papel</td>
-                            <td>Jornais, revistas, caixas de papelão limpas, embalagens de ovo.</td>
-                            <td>Papel higiênico, papel toalha usado, papel de bala, papel carbono, papel sujo de gordura (pizza).</td>
-                            <td>Estes vão para o lixo comum</td>
+                            <td>Terça-feira</td>
+                            <td>Limpeza e parada para a manutenção</td>
+                            <td>A partir das 07:00</td>
                         </tr>
                         <tr>
-                            <td class="metal">Metal</td>
-                            <td>Latas de refrigerante, latas de alimentos (limpas), tampas de pote.</td>
-                            <td>Clipe de papel (pequeno demais para ser recuperado), esponja de aço.</td>
-                            <td>Estes vão para o lixo comum</td>
+                            <td>Quarta-feira</td>
+                            <td>Pontinha das Laranjeiras, Laranjeiras, Sertão da Maricota, Coloninha e KM 37 (Após o trilho)</td>
+                            <td>A partir das 07:00</td>
                         </tr>
                         <tr>
-                            <td class="vidro">Vidro</td>
-                            <td>Garrafas e potes de vidro (inteiros e limpos).</td>
-                            <td>Vidro quebrado (embrulhar em papelão!). Louça/cerâmica quebrada.</td>
-                            <td>Estes vão para o lixo comum/rejeito</td>
+                            <td>Quinta-feira</td>
+                            <td>KM 37 (Antes do trilho)</td>
+                            <td>Periodo da manhã</td>
                         </tr>
-                        <td class="especiais">Itens Especiais</td>
-                        <td>Se não for reciclável padrão</td>
-                        <td>Fraldas, absorventes, pontas de cigarro, pó de café usado.</td>
-                        <td>Pilhas, Baterias, Lâmpadas, Óleo de Cozinha, Remédios Vencidos.</td>
                         <tr>
-                            <tfoot>
-                                <td colspan="4">Se for jogar algo no reciclável, pergunte-se: "Está limpo e seco?" Se a resposta for não, ele deve ir para o contentor de lixo comum.</td>
-                            </tfoot>
+                            <td>Quinta-feira</td>
+                            <td>Centro Pescaria Brava, Barreiros, Santiago e Taquaruçu</td>
+                            <td>Periodo da tarde</td>
+                        </tr>
+                        <tr>
+                            <td>Sexta-feira</td>
+                            <td>Estiva, Sertão de Baixo, Sertão de Cima, Carreira, Barranca, Siqueiro, Varginha e Centro Pescaria Brava</td>
+                            <td>A partir das 07:00</td>
                         </tr>
                     </table>
                 </div>
-            </div>
-            <div class="loc-contentores">
-                <h2>Localização do contetores</h2>
-                <img src="./assets/pb.png" alt="Localização dos contetores por Pescaria Brava.">
-            </div>
-            <div class="horario-data">
-                <table>
-                    <tr>
-                        <th>Dia</th>
-                        <th>Bairro</th>
-                        <th>Horário</th>
-                    </tr>
-                    <tr>
-                        <td>Segunda-feira</td>
-                        <td>Ruas principais e avenidas</td>
-                        <td>A partir das 07:00</td>
-                    </tr>
-                    <tr>
-                        <td>Terça-feira</td>
-                        <td>Limpeza e parada para a manutenção</td>
-                        <td>A partir das 07:00</td>
-                    </tr>
-                    <tr>
-                        <td>Quarta-feira</td>
-                        <td>Pontinha das Laranjeiras, Laranjeiras, Sertão da Maricota, Coloninha e KM 37 (Após o trilho)</td>
-                        <td>A partir das 07:00</td>
-                    </tr>
-                    <tr>
-                        <td>Quinta-feira</td>
-                        <td>KM 37 (Antes do trilho)</td>
-                        <td>Periodo da manhã</td>
-                    </tr>
-                       <tr>
-                        <td>Quinta-feira</td>
-                        <td>Centro Pescaria Brava, Barreiros, Santiago e Taquaruçu</td>
-                        <td>Periodo da tarde</td>
-                    </tr>
-                    <tr>
-                        <td>Sexta-feira</td>
-                        <td>Estiva, Sertão de Baixo, Sertão de Cima, Carreira, Barranca, Siqueiro, Varginha e Centro Pescaria Brava</td>
-                        <td>A partir das 07:00</td>
-                    </tr>
-                </table>
-            </div>
-        </main>
-        <footer>
-            <div class="border"></div>
-            <div class="contato">
-                <h4>Município de Pescaria Brava - projetos@pescariabrava.sc.gov.br - Telefone: (48) 92001-4057</h4>
-            </div>
-        </footer>
-</body>
-</html>
+            </main>
+            <footer>
+                <div class="border"></div>
+                <div class="contato">
+                    <h4>Município de Pescaria Brava - projetos@pescariabrava.sc.gov.br - Telefone: (48) 92001-4057</h4>
+                </div>
+            </footer>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="app.js"></script>
+    </body>
+    </html>
