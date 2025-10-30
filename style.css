@@ -49,9 +49,13 @@ h2 {
 table  {
     border-collapse: collapse;
     border: 1.5px solid #1A536F;
-    margin: 1rem;
+    margin: 15px 0px 15px 0px;
     width: 100%;
     background-color: #F0F0F0;
+}
+
+.nunca-jogar-mobile {
+    display: none;
 }
 
 .plastico {
@@ -84,7 +88,7 @@ th {
 td {
     border: 1px solid #1A536F;
     text-align: center;
-    padding: 1rem;
+    padding: 10px;
 }
 
 tfoot td {
@@ -109,4 +113,25 @@ footer {
 .border {
     border-bottom: solid 2px  #1A536F;
     margin-bottom: 0.5rem;
+}
+
+/* media */
+
+@media (max-width: 1200px) {
+    .nunca-jogar {
+        display: none;
+    }
+    #map {
+        height: 300px;
+        width: 100%;
+    }
+
+
+
+
+
+
+
+
+
 }
