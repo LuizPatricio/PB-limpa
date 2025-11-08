@@ -13,3 +13,11 @@ var marker = L.marker([-28.4264997252423, -48.88545773324723]).addTo(map);
 var marker = L.marker([-28.41389452357522, -48.89347251510526]).addTo(map);
 //cartorio
 var marker = L.marker([-28.42636021504351, -48.88601731334215]).addTo(map);
+//morro santiago 
+var marker = L.marker([-28.42108931030395, -48.89180012906524]).addTo(map);
+//escola santiago
+var marker = L.marker([-28.414626848518377, -48.893104707302065]).addTo(map);
+//bittencourt
+var marker = L.marker([-28.413754640831346, -48.89357066490777]).addTo(map);
+//final da rua laranjeiras
+var marker = L.marker([-28.43210388782826, -48.87808478255354]).addTo(map);
