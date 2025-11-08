@@ -21,3 +21,9 @@ var marker = L.marker([-28.414626848518377, -48.893104707302065]).addTo(map);
 var marker = L.marker([-28.413754640831346, -48.89357066490777]).addTo(map);
 //final da rua laranjeiras
 var marker = L.marker([-28.43210388782826, -48.87808478255354]).addTo(map);
+//auge
+var marker = L.marker([-28.42294402310637, -48.89406597240606]).addTo(map);
+//posto novo
+var marker = L.marker([-28.42384518842759, -48.89530688039843]).addTo(map);
+// posto de saude laranjeiras
+var marker = L.marker([-28.42944751244451, -48.86922926881995]).addTo(map);
